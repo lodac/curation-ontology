@@ -1,0 +1,2560 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/2022/04/data-curation-process"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/2022/04/data-curation-process"
+     versionIRI="http://www.semanticweb.org/2022/04/data-curation-process/1.0.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/2022/04/data-curation-process"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="prov-o-20130430" IRI="http://www.w3.org/ns/prov-o-20130430#"/>
+    <Import>http://www.w3.org/ns/prov-o-20130430</Import>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Declaration>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActualDataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AllowingFileDownload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Appraisal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArrangementAndDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Authentication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CeaseDataCuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChainOfCustody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CodeReview"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contextualization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contracts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conversion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Copyright"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreatingLandingPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataCleaning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataCurationActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataLifecycleActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataPreservationActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataPublishing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataVisualization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deidentification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DepositAgreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Digitization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiplomaticOrNationalSecurity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisciplinaryCustoms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisplayingDataCitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Documentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embargo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileAuditing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileFormatTransformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileInventoryOrManifest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileRenaming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileValidation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormulateSuccessionPlanning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IPR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indexing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformedConsent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interoperability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaintainingContactInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetadataGeneration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetadataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Migration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MintingPersistentIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PeerReview"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProvidingRestrictedAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QualityAssurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegisteringSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RightsManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RiskManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecuringStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Selection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensitiveData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SettingTermsOfUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubmitData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrackingUseAnalytics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transcoding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TranscribingAndTranslatingData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Versioning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#accessRestriction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#administrator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#appropriateRepository"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#authenticationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#backupData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#contactInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#costAndLeadTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#creditOnTheResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#curatedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#curationLog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#curationRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataCurator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataDepositer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataProcessingPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#documentationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#expertiseNecessity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#externalConstraints"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#externalServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#feasibility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#feeForUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fileLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fileValidationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fullTextInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#imposeTheSameConditions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#improperUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#indexingInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#landingPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#linkingInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#metadataCurator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#metadataSchema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#noDelivs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#nonCommercial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#peerReviewer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#persistentIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#policy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preservationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#reporting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#repositorySystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#researchData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#retrievalMetadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#reusability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#secondaryUseProhibited"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#selectionPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#selectionResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#softwareRegistry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sourceCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#submittedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#successionPlan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#systemAdministrator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#technicalInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#termsOfUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#typeOfResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#usageResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#useLatestVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#versionInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#visualizedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#waiver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#Revision"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#landingPage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#externalServiceProvider"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#visualizedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataProcessingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fileLocation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appraisal"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appraisal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#administrator"/>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#repositorySystem"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArrangementAndDescription"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#authenticationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDepositer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#preservationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#curationLog"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataDepositer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#fullTextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#externalServiceProvider"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <Class IRI="#MetadataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#linkingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contracts"/>
+        <Class IRI="#externalConstraints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conversion"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Copyright"/>
+        <Class IRI="#Contracts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Copyright"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedUsage"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#agreement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#fileLocation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#persistentIdentifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#selectionResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#repositorySystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#landingPage"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCleaning"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCurationActivities"/>
+        <Class IRI="#DataLifecycleActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCurationActivities"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#curationRecord"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataEvaluation"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#evaluationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataEvaluation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#peerReviewer"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataLifecycleActivities"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPolicy"/>
+        <Class IRI="#externalConstraints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPreservationActivities"/>
+        <Class IRI="#DataLifecycleActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataProcessing"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#dataDepositer"/>
+                <Class IRI="#metadataCurator"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPublishing"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPublishing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#evaluationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPublishing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#repositorySystem"/>
+                <Class IRI="#systemAdministrator"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataVisualization"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deidentification"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#selectionPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#agreement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Digitization"/>
+        <Class IRI="#Conversion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiplomaticOrNationalSecurity"/>
+        <Class IRI="#externalConstraints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisciplinaryCustoms"/>
+        <Class IRI="#externalConstraints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayingDataCitation"/>
+        <Class IRI="#CreatingLandingPage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#documentationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embargo"/>
+        <Class IRI="#AllowingFileDownload"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#softwareRegistry"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#systemAdministrator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#systemAdministrator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasInformedBy"/>
+            <Class IRI="#FormulateSuccessionPlanning"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileFormatTransformation"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInventoryOrManifest"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInventoryOrManifest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#curationLog"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInventoryOrManifest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileRenaming"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormulateSuccessionPlanning"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormulateSuccessionPlanning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#successionPlan"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormulateSuccessionPlanning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#preservationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormulateSuccessionPlanning"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#administrator"/>
+                <Class IRI="#dataCurator"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fullTextInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IPR"/>
+        <Class IRI="#Contracts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#linkingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#retrievalMetadata"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformedConsent"/>
+        <Class IRI="#Contracts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingest"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingest"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataDepositer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interoperability"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+            <Class IRI="#dataDepositer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <Class IRI="#MetadataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#retrievalMetadata"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadataSchema"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataDepositer"/>
+                <Class IRI="#metadataCurator"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#repositorySystem"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#persistentIdentifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curationLog"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#peerReviewer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalInformation"/>
+        <Class IRI="#externalConstraints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProvidingRestrictedAccess"/>
+        <Class IRI="#AllowingFileDownload"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#softwareRegistry"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#retrievalMetadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restructure"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#externalConstraints"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataDocument"/>
+                <Class IRI="#submittedData"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#backupData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#systemAdministrator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#authenticationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#selectionPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#selectionResults"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensitiveData"/>
+        <Class IRI="#PersonalInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SettingTermsOfUse"/>
+        <Class IRI="#CreatingLandingPage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SettingTermsOfUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#technicalInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#technicalInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="#systemAdministrator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#landingPage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#usageResults"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transcoding"/>
+        <Class IRI="#FileFormatTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TranscribingAndTranslatingData"/>
+        <Class IRI="#Conversion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#accessRestriction"/>
+        <Class IRI="#fileLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#administrator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#agreement"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#appropriateRepository"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#authenticationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#backupData"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#contactInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#costAndLeadTime"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#creditOnTheResults"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curatedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curatedData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curationLog"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curationRecord"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataCurator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataDepositer"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataDocument"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataProcessingPolicy"/>
+        <Class IRI="#policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataUser"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#documentationPolicy"/>
+        <Class IRI="#policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#expertiseNecessity"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#externalConstraints"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#externalServiceProvider"/>
+        <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feasibility"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feeForUse"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fileLocation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fileValidationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fullTextInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#imposeTheSameConditions"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#improperUse"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indexingInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#visualizedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+            <Class IRI="#repositorySystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasStartedBy"/>
+            <Class IRI="#DataPublishing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#retrievalMetadata"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasEndedBy"/>
+            <Class IRI="#CeaseDataCuration"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linkingInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadata"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadata"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadataCurator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadataSchema"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#noDelivs"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#nonCommercial"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#peerReviewer"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#persistentIdentifier"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#policy"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#preservationPolicy"/>
+        <Class IRI="#policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#quality"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#reporting"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#repositorySystem"/>
+        <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#researchData"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#retrievalMetadata"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#reusability"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#secondaryUseProhibited"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#selectionPolicy"/>
+        <Class IRI="#policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#selectionResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#size"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#softwareRegistry"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sourceCode"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sourceCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+            <Class IRI="#researchData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#submittedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#successionPlan"/>
+        <Class IRI="#policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#systemAdministrator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#technicalInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#termsOfUse"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#typeOfResource"/>
+        <Class IRI="#selectionPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#usageResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#useLatestVersion"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#versionInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#visualizedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#visualizedData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <ObjectUnionOf>
+                <Class IRI="#curatedData"/>
+                <Class IRI="#submittedData"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#waiver"/>
+        <Class IRI="#termsOfUse"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DataCurationActivities"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RiskManagement"/>
+        <Class IRI="#Selection"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActivatingMetadataBrokerage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Active dissemination of a data set’s metadata to search and discovery services (e.g., article databases, catalogs, web-based indexes) for federated search and discovery.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AllowingFileDownload</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Allow access to the data materials by authorized third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dcc.ac.uk/guidance/how-guides/appraise-select-data</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Appraisal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Appraisal is the process whereby some records are selected for retention, others (the great majority) are deemed of insufficient value to justify permanent retention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArrangementAndDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The re-organization of files (e.g., new folder directory structure) in a dataset that may also involve the creation of new file names, file descriptions, and the recording of technical metadata inherent to the files (e.g., date last modified).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Authentication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of confirming the identity of a person, generally the depositor, who is contributing data to the data repository. (e.g., password authentication or authorization via digital signature). Used for tracking provenance of the data files.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CeaseDataCuration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Plan for any contingencies that will ultimately terminate access to the data. For example, providing tombstones or metadata records for data that have been deselected and removed from stewardship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChainOfCustody</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Intentional recording of provenance metadata of the files (e.g., metadata about who created the file, when it was last edited, etc.) in order to preserve file authenticity when data are transferred to third-parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CodeReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Run and validate computer code (e.g., look for missing files and/or errors) in order to find mistakes overlooked in the initial development phase, improving the overall quality of software.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConnectingDiscoveryServices</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To connect services that incorporate machine-based search and retrieval functionality that help users identify what data exist, where the data are located, and how can they be accessed (e.g., full-text indexing or web optimization).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contextualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Use metadata to link the data set to related publications, dissertations, and/or projects that provide added context to how the data were generated and why.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contracts</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">An agreement with a research partner, contractor, etc. that restricts the data publishing in joint research or contract research.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In effort to increase the usability of a data set, the information is transferred into digital file formats (e.g., analog data keyed into a database).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CreatingLandingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A web page associated with some dataset or identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataCleaning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A process used to improve data quality by detecting and correcting (or removing) defects &amp; errors in data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataCurationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The encompassing work and actions taken by curators of a data repository in order to provide meaningful and enduring access to data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://casrai.org/term/evaluation/</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Evaluation is a decision about significance, value, or quality of something, based on careful study of its good and bad features.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Where the research funder has a policy on limited data sharing for the research to be funded, or where a strategic business decision restricts the data publishing relating to pending industrial property rights or research data where the commercialization of the research results is envisaged.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://casrai.org/term/data-processing/</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A generic concept referring to all kinds of procedures being executed on data at any point in the data life cycle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://casrai.org/term/data-publication/</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataPublishing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The release of research data, associated metadata, accompanying documentation, and software code (in cases where the raw data have been processed or manipulated) for re-use and analysis in such a manner that they can be discovered on the Web and referred to in a unique and persistent way. Data publishing occurs via dedicated data repositories and/or (data) journals which ensure that the published research objects are well documented, curated, archived for the long term, interoperable, citable, quality assured and discoverable – all aspects of data publishing that are important for future reuse of data by third party end-users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataVisualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The presentation of pictorial and/or graphical representations of a data set used to identify patterns, detect errors, and/or demonstrate the extent of a data set to third party users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Deidentification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Redacting or removing personally identifiable or protected information (e.g., sensitive geographic locations) from a dataset prior to sharing with third-parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DepositAgreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The certification by the data author (or depositor) that the data conform to all policies and conditions (e.g., do not violate any legal restrictions placed on the data) and are fit for deposit into the repository. A deposit agreement may also include rights transfer to the repository for ongoing stewardship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DiplomaticOrNationalSecurity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Research data pertaining to national security. Data related to the development of weapons of mass destruction, etc. (as defined in the Foreign Exchange and Foreign Trade Act) and defense secrets (the Self-Defense Forces). law), important data that may affect national life (e.g., domestic energy (e.g., location of resources, blueprints for critical equipment, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DisciplinaryCustoms</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Practices and standards in a specific discipline or research community that limit the data publishing. In some cases this is stated as an international treaty, but in others it is not always explicitly stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DisplayingDataCitation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Display of a recommended bibliographic citation for a dataset to enable appropriate attribution by third-party users in order to formally incorporate data reuse as part of the scholarly ecosystem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Documentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To describe Information about any necessary information to use and understand the data. Documentation may be structured (e.g., a code book) or unstructured (e.g., a plain text “Readme” file).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Embargo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To restrict or mediate access to a data set, usually for a set period of time. In some cases an embargo may be used to protect not only access, but any knowledge that the data exist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Emulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Provide legacy system configurations in modern equipment in order to ensure long-term usability of data. (E.g., arcade games emulated on modern web-browsers)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FileAuditing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Periodic review of the digital integrity of the data files and taking action when needed to protect data from digital erosion (e.g., bitrot) and/or hardware failure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FileFormatTransformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Transform files into open, non-proprietary file formats that broaden the potential for long-term reuse and ensure that additional preservation actions might be taken in the future.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FileInventoryOrManifest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The data files are inspected periodically and the number, file types (extensions), and file sizes of the data are understood and documented. Any missing, duplicate, or corrupt (e.g., unable to open) files are discovered.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FileRenaming</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To rename files in a dataset, often to standardize and/or reflect important metadata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FileValidation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A computational process to ensure that the intended data transfer to a repository was perfect and complete using means such as generating and validating file checksums (e.g., test if a digital file has changed at the bit level) and format validation to ensure that file types match their extensions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FormulateSuccessionPlanning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Planning for contingency, and/or escrow arrangements, in the case that the repository (or other entity responsible) ceases to operate or the institution substantially changes its scope.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GeneratingFulltextIndexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Enhance the data for discovery purposes by generating search-engine-optimized formats of the text inherent to the data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Indexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Verify all metadata provided by the author and crosswalk to descriptive and administrative metadata compliant with a standard format for repository interoperability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ingest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of turning a Submission Information Package (SIP) into an Archival Information Package (AIP), i.e. putting data into a digital archive (OAIS term)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Formatting the data using a disciplinary standard for better integration with other datasets and/or systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaintainingContactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Keep up-to-date contact information for the data authors and/or the contact persons in order to facilitate connection with third-party users. Often involves managing ephemeral information that will change over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MetadataGeneration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A generation process of metadata which is the Information about a data set that is structured (often in machine-readable format) for purposes of search and retrieval. Metadata elements may include basic information (e.g. title, author, date created, etc.) and/or specific elements inherent to datasets (e.g., spatial coverage, time periods).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Migration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Monitor and anticipate file format obsolescence and, as needed, transform obsolete file formats to new formats as standards and use dictate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MintingPersistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To mint a permanent URL (or Uniform Resource Locator) that is monitored by an authority to ensure a stable web location for consistent citation and long-term discoverability. Provides redirection when necessary. E.g., a Digital Object Identifier or DOI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PeerReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The review of a data set by an expert with similar credentials and subject knowledge as the data creator for the purposes of validating the soundness and trustworthiness of the file contents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PersonalInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">It stipulates the handling of data that can identify individuals. It includes guidelines that define individual policies on anonymization and information disclosure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProvidingRestrictedAccess</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In order to maintain the privacy of research subjects without losing integral components of the data, some data access will be protected and/or mediated to individuals that meet predefined criteria.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#QualityAssurance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Ensure that all documentation and metadata are comprehensive and complete. Example actions might include: open and run the data files; inspect the contents in order to validate, clean, and/or enhance data for future use; look for missing documentation about codes used, the significance of “null” and “blank” values, or unclear acronyms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RegisteringSoftware</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Maintain copies of modern and obsolete versions of software (and any relevant code libraries) so that data may be opened/used overtime.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Restructure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Organize and/or reformate poorly structured data files to clarify their meaning and importance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RightsManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of tracking and managing ownership and copyright inherent to a data set as well as monitoring conditions and policies for access and reuse (e.g., licenses and data use agreements).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RiskManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of reviewing data for known risks such as confidentiality issues inherent to human subjects data, sensitive information (e.g., sexual histories, credit card information) or data regulated by law (e.g. HIPAA, FERPA) and taking actions to reject or facilitate remediation (e.g., de-identification services) when necessary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SecuringStorage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Data files are properly stored in a well-configured (in terms of hardware and software) storage environment that is routinely backed-up and physically protected. Perform routine fixity checks (to detect degradation or loss) and provide recovery services as needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Selection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of a successful appraisal. The data are determined appropriate for acceptance and ingest into the repository according to local collection policy and practice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SettingTermsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information provided to end users of a data set that outline the requirements or conditions for use (e.g., a Creative Commons License).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SubmitData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To submit data to start data curation activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TechnologyMonitoringAndRefreshing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Formal, periodic review and assessment to ensure responsiveness to technological developments and evolving requirements of the digital infrastructure and hardware storing the data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TrackingUseAnalytics</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Monitor and record how often data are viewed, requested, and/or downloaded. Track and report reuse metrics, such as data citations and impact measures for the data over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Transcoding</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">With audio and video files, detect technical metadata (min resolution, audio/video codec) and encode files in ways that optimize reuse and long-term preservation actions. (E.g, Convert QuickTime files to MPEG4).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/11299/188638</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Versioning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Provide mechanisms to ingest new versions of the data overtime that includes metadata describing the version history and any changes made for each version.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#creditOnTheResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use requires displaying the creator’s name and data URL information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#feeForUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use requires some fee for data use.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#imposeTheSameConditions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use requires the same condition of use under redistribution and combination of multiple pieces of data. Unlike “Attribution,” it may prevent them from combining the data with other sets that have an incompatible license.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#improperUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use prohibits “Improper use” of data in the data processing phase. Note that the definition of inappropriate use will probably depend on the conventions of the field.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#noDelivs</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use prohibits data publishing after any modification. The case in which the prohibition of modification is effective is presumed to largely depend on the type of data and the manner of use (e.g., image data that are practically a work of art).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nonCommercial</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use requires the “non-commercial” use of data. Also, the limitation is on redistribution and data processing (e.g., selling visualizations derived from the data).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reporting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use requires post-reuse reporting, suggesting that the objective is to know detailed usage practices rather than mechanical access statistics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#secondaryUseProhibited</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use prohibits the secondary use of data. This license clearly prohibits data redistribution, translation, or adaption and is intended for one-on-one use of its original form.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://doi.org/10.5334/dsj-2020-053</Literal>
+        </Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#termsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">“Condition of use” generally means use permission/prohibition, obligations, and constraints based on the types of research data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#termsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Conditions of Use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#useLatestVersion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This condition of use is used to limit the use of data to the latest one. Data in the past cannot be reused.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#waiver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Waives copyright and all other related rights</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
