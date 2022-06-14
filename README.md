@@ -8,3 +8,6 @@ The ontology aims to represent commonalities and differences in data curation ac
 The currently developed version is available on GitHub: https://github.com/lodac/data-curation/tree/main/src/ontology
 
 To open the ontology the program Protégé (https://protege.stanford.edu/) is recommended.
+
+# Publications
+Minamiyama, Yasuyuki, Takeda, Hideaki, Hayashi, Masaharu, Asaoka, Makoto, & Yamaji, Kazutsuna. (2022). Development and utilization of data curation process ontology. Zenodo. https://doi.org/10.5281/zenodo.6624457
