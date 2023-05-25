@@ -1,0 +1,3913 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/2022/04/data-curation-process"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/2022/04/data-curation-process"
+     versionIRI="http://www.semanticweb.org/2022/04/data-curation-process/1.1.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/2022/04/data-curation-process"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/ns/prov-o-20130430</Import>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The Data Curation Process ontology (dcp-o) represents the theoretical lifecycle of data curation activities across the field. This ontology covers a domain for representing potential and completed data curation activities. Semantic interoperability in the research process is essential in facilitating interpretation and access to research data, and this ontology plays a vital role in achieving mutual understanding across the field. The description of this ontology is based on the vocabulary of the PROV ontology (https://www.w3.org/TR/prov-o/) endorsed by W3C. This ontology was developed as part of research activities at the National Institute of Informatics, Japan.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dcp-o</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Changes in v.1.1
+- Added labels and definitions to all described classes (Activity, Agent, Entity).
+Removed the following three Activity classes to be treated as properties: SettingTermsOfUse, Embargo, and ProvidingRestrictedAccess.
+- Changed the development policy regarding Agent classes; v.1.1 represented by a combination of the defined Agent class (Organization, Person, SoftwareAgent) and some asserted Role as &quot;dataCurationContributor.&quot; In line with this change, we defined &quot;hadRole&quot; as a sub-property of &quot;qualifiedAssociation.&quot;
+- Re-organized all Entity classes according to the newly-added labels and descriptions. They roughly divided into three categories: searchObject, dataCurationResources, and accessRightsInformation.
+- Modified the following three class IRIs: Restructure to DataRestructuring, FileInventoryOrManifest to FileInspection, and FormulateSuccessionPlanning to SuccessionPlanning.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>version 1.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActualDataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AllowingFileDownload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Appraisal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArrangementAndDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Authentication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CeaseDataCuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChainOfCustody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CodeReview"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contextualization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conversion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreatingLandingPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataCleaning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataCurationActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataLifecycleActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataPreservationActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataPublishing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataRestructuring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataVisualization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deidentification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DepositAgreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Documentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileAuditing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileFormatTransformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileInspection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileRenaming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileValidation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeneratingDatacitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indexing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interoperability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaintainingContactInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetadataGeneration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetadataProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Migration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MintingPersistentIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PeerReview"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QualityAssurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegisteringSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RightsManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RiskManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecuringStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Selection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubmitData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuccessionPlanning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrackingUseAnalytics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transcoding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Versioning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#accessRestriction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#accessRightsInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#administrator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#authenticationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bibliographicInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#citationInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#contactInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#curatedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#curationRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataCurationContributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataCurationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataCurationResources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataCurator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataDepositer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataProcessingPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dataUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#documentationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#externalServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fileLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fileValidationResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fullTextInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#indexingInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#landingPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#linkingInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#metadataSchema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#peerReviewer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#persistentIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#provenanceInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#repositorySystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#researchData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#researchObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#retentionPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#selectionPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#selectionResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#softwareRegistry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sourceCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#submittedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#successionPlan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#technicalInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#termsOfUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#usageResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#versionInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#visualizedData"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#Revision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#landingPage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatingMetadataBrokerage"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#externalServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#visualizedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataProcessingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActualDataProcessing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#repositorySystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllowingFileDownload"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fileLocation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appraisal"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appraisal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appraisal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#administrator"/>
+                <Class IRI="#dataCurator"/>
+            </ObjectIntersectionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArrangementAndDescription"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#authenticationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#retentionPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CeaseDataCuration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#provenanceInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainOfCustody"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CodeReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#fullTextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#externalServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectingDiscoveryServices"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <Class IRI="#MetadataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#linkingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contextualization"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conversion"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#repositorySystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingLandingPage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#landingPage"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCleaning"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCurationActivities"/>
+        <Class IRI="#DataLifecycleActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataCurationActivities"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#curationRecord"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataEvaluation"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#evaluationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataLifecycleActivities"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPreservationActivities"/>
+        <Class IRI="#DataLifecycleActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataProcessing"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPublishing"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataPublishing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#evaluationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataRestructuring"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataVisualization"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deidentification"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#selectionPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepositAgreement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#agreement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#documentationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Documentation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#softwareRegistry"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emulation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileAuditing"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasInformedBy"/>
+            <Class IRI="#SuccessionPlanning"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileFormatTransformation"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInspection"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInspection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInspection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileInspection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileRenaming"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileValidation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingDatacitation"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingDatacitation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#citationInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingDatacitation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingDatacitation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#bibliographicInformation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingDatacitation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#repositorySystem"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneratingFulltextIndexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#fullTextInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#linkingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#bibliographicInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingest"/>
+        <Class IRI="#DataCurationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataDepositer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingest"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interoperability"/>
+        <Class IRI="#ActualDataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaintainingContactInformation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#contactInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <Class IRI="#MetadataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataCurator"/>
+                <Class IRI="#dataDepositer"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataGeneration"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#bibliographicInformation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <Class IRI="#DataProcessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadataSchema"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetadataProcessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Migration"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <Class IRI="#DataPublishing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#persistentIdentifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#indexingInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#externalServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MintingPersistentIdentifier"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#provenanceInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#peerReviewer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeerReview"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <Class IRI="#DataEvaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QualityAssurance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#Revision"/>
+            <Class IRI="#softwareRegistry"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurationContributor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteringSoftware"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightsManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RiskManagement"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <ObjectUnionOf>
+                <Class IRI="#dataDocument"/>
+                <Class IRI="#submittedData"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#fileLocation"/>
+                <Class IRI="#versionInformation"/>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecuringStorage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <Class IRI="#Appraisal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#accessRestriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#authenticationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#fileValidationResults"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#selectionPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#termsOfUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#selectionResults"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <Class IRI="#Ingest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#sourceCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubmitData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuccessionPlanning"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuccessionPlanning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#successionPlan"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuccessionPlanning"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurationContributor"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuccessionPlanning"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#influenced"/>
+            <Class IRI="#technicalInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#technicalInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyMonitoringAndRefreshing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#dataDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#landingPage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataManager"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingUseAnalytics"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#usageResults"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transcoding"/>
+        <Class IRI="#FileFormatTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+            <Class IRI="#dataCurationContributor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#curatedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#submittedData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Versioning"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+            <Class IRI="#versionInformation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#accessRestriction"/>
+        <Class IRI="#accessRightsInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#accessRightsInformation"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#administrator"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#agreement"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#authenticationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bibliographicInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#citationInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#contactInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curatedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curatedData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <Class IRI="#submittedData"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#curationRecord"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataCurationContributor"/>
+        <Class IRI="http://www.w3.org/ns/prov#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataCurationPolicy"/>
+        <Class IRI="#dataCurationResources"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataCurationResources"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataCurator"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataDepositer"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataDocument"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataManager"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataProcessingPolicy"/>
+        <Class IRI="#dataCurationPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dataUser"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#documentationPolicy"/>
+        <Class IRI="#dataCurationPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#externalServiceProvider"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fileLocation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fileValidationResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fullTextInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indexingInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landingPage"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linkingInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadata"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadata"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#metadataSchema"/>
+        <Class IRI="#dataCurationResources"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#peerReviewer"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#persistentIdentifier"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#provenanceInformation"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#repositorySystem"/>
+        <Class IRI="#dataCurationContributor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#researchData"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#researchObject"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#retentionPolicy"/>
+        <Class IRI="#dataCurationPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#selectionPolicy"/>
+        <Class IRI="#dataCurationPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#selectionResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#softwareRegistry"/>
+        <Class IRI="#dataCurationResources"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sourceCode"/>
+        <Class IRI="#researchObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sourceCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#submittedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#successionPlan"/>
+        <Class IRI="#dataCurationPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#technicalInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#termsOfUse"/>
+        <Class IRI="#accessRightsInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#usageResults"/>
+        <Class IRI="#curationRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#versionInformation"/>
+        <Class IRI="#metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#visualizedData"/>
+        <Class IRI="#researchData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#visualizedData"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <ObjectUnionOf>
+                <Class IRI="#curatedData"/>
+                <Class IRI="#submittedData"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DataCurationActivities"/>
+        <Class IRI="#DataPreservationActivities"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RiskManagement"/>
+        <Class IRI="#Selection"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#hadRole"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedAssociation"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ActivatingMetadataBrokerage</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivatingMetadataBrokerage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActivatingMetadataBrokerage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#ActivatingMetadataBrokerage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">メタデータ仲介の開始</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#ActivatingMetadataBrokerage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Active dissemination of a data set’s metadata to search and discovery services (e.g., article databases, catalogs, web-based indexes) for federated search and discovery.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ActualDataProcessing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActualDataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActualDataProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#ActualDataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">実データ処理</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AllowingFileDownload</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AllowingFileDownload</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">AllowingFileDownload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#AllowingFileDownload</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイルダウンロードの許可</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#AllowingFileDownload</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Allow access to the data materials by authorized third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Appraisal</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Appraisal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Appraisal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Appraisal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">鑑定評価</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Appraisal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Appraisal is the process whereby some records are selected for retention, others (the great majority) are deemed of insufficient value to justify permanent retention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ArrangementAndDescription</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ArrangementAndDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ArrangementAndDescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#ArrangementAndDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">配置・記述</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#ArrangementAndDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The re-organization of files (e.g., new folder directory structure) in a dataset that may also involve the creation of new file names, file descriptions, and the recording of technical metadata inherent to the files (e.g., date last modified).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Authentication</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Authentication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Authentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Authentication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">認証</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Authentication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of confirming the identity of a person, generally the depositor, who is contributing data to the data repository. (e.g., password authentication or authorization via digital signature). Used for tracking provenance of the data files.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CeaseDataCuration</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CeaseDataCuration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CeaseDataCuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#CeaseDataCuration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレーションの中止</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#CeaseDataCuration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Plan for any contingencies that will ultimately terminate access to the data. For example, providing tombstones or metadata records for data that have been deselected and removed from stewardship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ChainOfCustody</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ChainOfCustody</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ChainOfCustody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#ChainOfCustody</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">証拠保全</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#ChainOfCustody</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Intentional recording of provenance metadata of the files (e.g., metadata about who created the file, when it was last edited, etc.) in order to preserve file authenticity when data are transferred to third-parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CodeReview</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CodeReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CodeReview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#CodeReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">コードレビュー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#CodeReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Run and validate computer code (e.g., look for missing files and/or errors) in order to find mistakes overlooked in the initial development phase, improving the overall quality of software.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ConnectingDiscoveryServices</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConnectingDiscoveryServices</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ConnectingDiscoveryServices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#ConnectingDiscoveryServices</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ディスカバリサービスへの接続</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#ConnectingDiscoveryServices</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To connect services that incorporate machine-based search and retrieval functionality that help users identify what data exist, where the data are located, and how can they be accessed (e.g., full-text indexing or web optimization).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Contextualization</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contextualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Contextualization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Contextualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">コンテキストの付与</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Contextualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Use metadata to link the data set to related publications, dissertations, and/or projects that provide added context to how the data were generated and why.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Conversion</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">コンバージョン</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In effort to increase the usability of a data set, the information is transferred into digital file formats (e.g., analog data keyed into a database).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CreatingLandingPage</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CreatingLandingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CreatingLandingPage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#CreatingLandingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ランディングページ作成</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#CreatingLandingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Creating a web page associated with some dataset or identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataCleaning</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataCleaning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataCleaning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataCleaning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データクリーニング</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataCleaning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A process used to improve data quality by detecting and correcting (or removing) defects &amp; errors in data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataCurationActivities</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataCurationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataCurationActivities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataCurationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレーション活動</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataCurationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The encompassing work and actions taken by curators of a data repository in order to provide meaningful and enduring access to data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataEvaluation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataEvaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ評価</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of judging or calculating the quality, importance, amount, or value of research data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataLifecycleActivities</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataLifecycleActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataLifecycleActivities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataLifecycleActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データライフサイクル活動</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataPreservationActivities</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataPreservationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataPreservationActivities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataPreservationActivities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ保存活動</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataProcessing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ処理</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A generic concept referring to all kinds of procedures being executed on data at any point in the data life cycle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataPublishing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataPublishing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataPublishing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataPublishing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ公開</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataPublishing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The release of research data, associated metadata, accompanying documentation, and software code (in cases where the raw data have been processed or manipulated) for re-use and analysis in such a manner that they can be discovered on the Web and referred to in a unique and persistent way. Data publishing occurs via dedicated data repositories and/or (data) journals which ensure that the published research objects are well documented, curated, archived for the long term, interoperable, citable, quality assured and discoverable – all aspects of data publishing that are important for future reuse of data by third party end-users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataRestructuring</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataRestructuring</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataRestructuring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataRestructuring</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データの再構成</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataRestructuring</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Organize and/or reformate poorly structured data files to clarify their meaning and importance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataVisualization</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataVisualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DataVisualization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DataVisualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ可視化</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DataVisualization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To visualize a dataset used for identifying patterns, detecting errors, and/or demonstrating the extent of a dataset to third party users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Deidentification</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Deidentification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Deidentification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Deidentification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">匿名化</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Deidentification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Redacting or removing personally identifiable or protected information (e.g., sensitive geographic locations) from a dataset prior to sharing with third-parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DepositAgreement</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DepositAgreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DepositAgreement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#DepositAgreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">合意書の寄託</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#DepositAgreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A process of depositing agreements which is the certification by the data author (or depositor) that the data conform to all policies and conditions (e.g., do not violate any legal restrictions placed on the data) and are fit for deposit into the repository. A deposit agreement may also include rights transfer to the repository for ongoing stewardship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Documentation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Documentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Documentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">文書化</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Documentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To describe Information about any necessary information to use and understand the data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Emulation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Emulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Emulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Emulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">エミュレーション</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Emulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Provide legacy system configurations in modern equipment in order to ensure long-term usability of data. (E.g., arcade games emulated on modern web-browsers)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FileAuditing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FileAuditing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">FileAuditing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#FileAuditing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイル監査</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#FileAuditing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Periodic review of the digital integrity of the data files and taking action when needed to protect data from digital erosion (e.g., bitrot) and/or hardware failure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FileFormatTransformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FileFormatTransformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">FileFormatTransformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#FileFormatTransformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイルフォーマット変換</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#FileFormatTransformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Transform files into open, non-proprietary file formats that broaden the potential for long-term reuse and ensure that additional preservation actions might be taken in the future.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FileInspection</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FileInspection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">FileInspection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#FileInspection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイルインスペクション</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#FileInspection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The data files are inspected periodically and the number, file types (extensions), and file sizes of the data are understood and documented. Any missing, duplicate, or corrupt (e.g., unable to open) files are discovered.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FileRenaming</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FileRenaming</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">FileRenaming</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#FileRenaming</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">リネーム</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#FileRenaming</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To rename files in a dataset, often to standardize and/or reflect important metadata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FileValidation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FileValidation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">FileValidation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#FileValidation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイル検証</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#FileValidation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A computational process to ensure that the intended data transfer to a repository was perfect and complete using means such as generating and validating file checksums (e.g., test if a digital file has changed at the bit level) and format validation to ensure that file types match their extensions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#GeneratingDatacitation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeneratingDatacitation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">GeneratingDataCitation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#GeneratingDatacitation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ引用情報の生成</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#GeneratingDatacitation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Generating a recommended bibliographic citation for a dataset to enable appropriate attribution by third-party users in order to formally incorporate data reuse as part of the scholarly ecosystem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#GeneratingFulltextIndexing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeneratingFulltextIndexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">GeneratingFulltextIndexing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#GeneratingFulltextIndexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">フルテキストインデクシング生成</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#GeneratingFulltextIndexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Enhance the data for discovery purposes by generating search-engine-optimized formats of the text inherent to the data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Indexing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Indexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Indexing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Indexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">インデックス化</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Indexing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Verify all metadata provided by the author and crosswalk to descriptive and administrative metadata compliant with a standard format for repository interoperability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Ingest</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ingest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Ingest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Ingest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">インジェスト</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Ingest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of turning a Submission Information Package (SIP) into an Archival Information Package (AIP), i.e. putting data into a digital archive (OAIS term)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Interoperability</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Interoperability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">相互運用性</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Formatting the data using a disciplinary standard for better integration with other datasets and/or systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MaintainingContactInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MaintainingContactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MaintainingContactInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#MaintainingContactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">コンタクト情報の管理</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#MaintainingContactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Keep up-to-date contact information for the data authors and/or the contact persons in order to facilitate connection with third-party users. Often involves managing ephemeral information that will change over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MetadataGeneration</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MetadataGeneration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MetadataGeneration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#MetadataGeneration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">メタデータ生成</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#MetadataGeneration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A generation process of metadata which is the Information about a data set that is structured (often in machine-readable format) for purposes of search and retrieval. Metadata elements may include basic information (e.g. title, author, date created, etc.) and/or specific elements inherent to datasets (e.g., spatial coverage, time periods).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MetadataProcessing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MetadataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MetadataProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#MetadataProcessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">メタデータ処理</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Migration</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Migration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Migration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Migration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">マイグレーション</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Migration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Monitor and anticipate file format obsolescence and, as needed, transform obsolete file formats to new formats as standards and use dictate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MintingPersistentIdentifier</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MintingPersistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MintingPersistentIdentifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#MintingPersistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">永続識別子の付与</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#MintingPersistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To mint a permanent URL (or Uniform Resource Locator) that is monitored by an authority to ensure a stable web location for consistent citation and long-term discoverability. Provides redirection when necessary. E.g., a Digital Object Identifier or DOI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#PeerReview</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PeerReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">PeerReview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#PeerReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">査読</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#PeerReview</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The review of a data set by an expert with similar credentials and subject knowledge as the data creator for the purposes of validating the soundness and trustworthiness of the file contents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#QualityAssurance</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QualityAssurance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">QualityAssurance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#QualityAssurance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">品質保証</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#QualityAssurance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Ensure that all documentation and metadata are comprehensive and complete. Example actions might include: open and run the data files; inspect the contents in order to validate, clean, and/or enhance data for future use; look for missing documentation about codes used, the significance of “null” and “blank” values, or unclear acronyms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#RegisteringSoftware</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegisteringSoftware</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">RegisteringSoftware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#RegisteringSoftware</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ソフトウェアの登録</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#RegisteringSoftware</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Maintain copies of modern and obsolete versions of software (and any relevant code libraries) so that data may be opened/used overtime.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#RightsManagement</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RightsManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">RightsManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#RightsManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ライツマネジメント</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#RightsManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of tracking and managing ownership and copyright inherent to a data set as well as monitoring conditions and policies for access and reuse (e.g., licenses and data use agreements).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#RiskManagement</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RiskManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">RiskManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#RiskManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">リスクマネジメント</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#RiskManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of reviewing data for known risks such as confidentiality issues inherent to human subjects data, sensitive information (e.g., sexual histories, credit card information) or data regulated by law (e.g. HIPAA, FERPA) and taking actions to reject or facilitate remediation (e.g., de-identification services) when necessary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SecuringStorage</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SecuringStorage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">SecuringStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#SecuringStorage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ストレージの確保</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#SecuringStorage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Data files are properly stored in a well-configured (in terms of hardware and software) storage environment that is routinely backed-up and physically protected. Perform routine fixity checks (to detect degradation or loss) and provide recovery services as needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Selection</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Selection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Selection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Selection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">選定</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Selection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The process of a successful appraisal. The data are determined appropriate for acceptance and ingest into the repository according to local collection policy and practice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SubmitData</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SubmitData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">SubmitData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#SubmitData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ提出</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#SubmitData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">To submit data to start data curation activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SuccessionPlanning</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SuccessionPlanning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">SuccessionPlanning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#SuccessionPlanning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">サクセッションプランニング</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#SuccessionPlanning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Planning for contingency, and/or escrow arrangements, in the case that the repository (or other entity responsible) ceases to operate or the institution substantially changes its scope.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TechnologyMonitoringAndRefreshing</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TechnologyMonitoringAndRefreshing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">TechnologyMonitoringAndRefreshing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#TechnologyMonitoringAndRefreshing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">技術動向のモニタリング・更新</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#TechnologyMonitoringAndRefreshing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Formal, periodic review and assessment to ensure responsiveness to technological developments and evolving requirements of the digital infrastructure and hardware storing the data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TrackingUseAnalytics</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrackingUseAnalytics</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">TrackingUseAnalytics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#TrackingUseAnalytics</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">利用状況の追跡</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#TrackingUseAnalytics</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Monitor and record how often data are viewed, requested, and/or downloaded. Track and report reuse metrics, such as data citations and impact measures for the data over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Transcoding</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Transcoding</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Transcoding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Transcoding</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">トランスコーディング</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Transcoding</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">With audio and video files, detect technical metadata (min resolution, audio/video codec) and encode files in ways that optimize reuse and long-term preservation actions. (E.g, Convert QuickTime files to MPEG4).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Versioning</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Versioning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Versioning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#Versioning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">バージョン管理</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#Versioning</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Provide mechanisms to ingest new versions of the data overtime that includes metadata describing the version history and any changes made for each version.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#accessRestriction</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accessRestriction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">accessRestriction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#accessRestriction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">アクセス制限</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#accessRestriction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Access restrictions based on privacy, security, or other policies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#accessRightsInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accessRightsInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">accessRightsInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#accessRightsInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">アクセス権情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#accessRightsInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Generally means use permission/prohibition, obligations, and constraints based on the types of research data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#administrator</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#administrator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">administrator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#administrator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">管理者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#administrator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A person who administrate a set of data curation activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#agreement</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#agreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">agreement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#agreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">合意書</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#agreement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The certification by the data author (or depositor) that the data conform to all policies and conditions (e.g., do not violate any legal restrictions placed on the data) and are fit for deposit into the repository.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#authenticationResults</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#authenticationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">authenticationResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#authenticationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">認証結果</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#authenticationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A results of confirming the identity of a person, generally the depositor, who is contributing data to the data repository.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#bibliographicInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bibliographicInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">bibliographicInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#bibliographicInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">書誌情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#bibliographicInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Standard bibliographic metadata describing an expression of a research object. An example of bibliographic metadata for research data typically includes the creators&apos; names, the publication year, the title of the research object, the name of the publisher, and the identifier for the research object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#citationInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#citationInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">citationInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#citationInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">引用情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#citationInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A recommended bibliographic citation for a dataset to enable appropriate attribution by third-party users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#contactInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">contactInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#contactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">コンタクト情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#contactInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information about a point of contact. This includes an address, phone number, or email address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#curatedData</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#curatedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">curatedData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#curatedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">キュレーション済みデータ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#curatedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Research data curated according to configured data curation policies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#curationRecord</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#curationRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">curationRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#curationRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">キュレーション記録</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#curationRecord</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A written record of any changes made to the data during the curation process and by whom. File is often preserved as part of the overall record.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataCurationContributor</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataCurationContributor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataCurationContributor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataCurationContributor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレーション貢献者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataCurationContributor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">An agent identified as contributing to the various data curation activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataCurationPolicy</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataCurationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataCurationPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataCurationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレーションポリシー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataCurationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A description and definition of how something of data curation process should be done.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataCurationResources</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataCurationResources</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataCurationResources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataCurationResources</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレーションリソース</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataCurationResources</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Resources such as schemas, tools, and policies used to implement data curation activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataCurator</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataCurator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataCurator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataCurator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データキュレータ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataCurator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a repository.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataDepositer</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataDepositer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataDepositor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataDepositer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ登録者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataDepositer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A person or an institution that have datasets to deposit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataDocument</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataDocument</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataDocument</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ文書</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataDocument</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information about any necessary information to use and understand the data. Documentation may be structured (e.g., a code book) or unstructured (e.g., a plain text “Readme” file).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataManager</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataManager</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataManager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataManager</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ管理者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataManager</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Person responsible for maintaining the finished resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataProcessingPolicy</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataProcessingPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataProcessingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataProcessingPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ処理ポリシー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataProcessingPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A description and definition of how data processing should be done.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dataUser</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataUser</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">dataUser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#dataUser</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ利用者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#dataUser</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A person or an institution that use datasets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#documentationPolicy</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#documentationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">documentationPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#documentationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">データ文書化ポリシー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#documentationPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A description and definition of how data documentation process should be done.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#evaluationResults</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#evaluationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">evaluationResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#evaluationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">評価結果</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#evaluationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A results of the decision about significance, value, or quality of something, based on careful study of its good and bad features.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#externalServiceProvider</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#externalServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">externalServiceProvider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#externalServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">外部サービスプロバイダ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#externalServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">An agent that connects to a repository system to provide external services such as search and access management.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fileLocation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fileLocation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">fileLocation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#fileLocation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイルの場所</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#fileLocation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A location of an identifiable place for any of research object. In repositories, it is almost represented by a unique URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fileValidationResults</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fileValidationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">fileValidationResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#fileValidationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ファイル検証結果</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#fileValidationResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A results to ensure that the intended data transfer to a repository was perfect and complete using means such as generating and validating file checksums and format validation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fullTextInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fullTextInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">fullTextInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#fullTextInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">フルテキスト情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#fullTextInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Search-engine-optimized formats of the text inherent to the research data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#indexingInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#indexingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">indexingInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#indexingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">索引情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#indexingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Crosswalk information to descriptive and administrative metadata compliant with a standard format for repository interoperability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#landingPage</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#landingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">landingPage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#landingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ランディングページ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#landingPage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A page that describes the metadata and way of access to the research object contained in the repository.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#linkingInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#linkingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">linkingInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#linkingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">リンク情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#linkingInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information about some contextual linkage such as related publications, dissertations, and/or projects that provide added context to how the data were generated and why.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#metadata</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">メタデータ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information about a data set that is structured (often in machine-readable format) for purposes of search and retrieval. Metadata elements may include basic information (e.g. title, author, date created, etc.) and/or specific elements inherent to datasets (e.g., spatial coverage, time periods).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#metadataSchema</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metadataSchema</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">metadataSchema</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#metadataSchema</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">メタデータスキーマ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#metadataSchema</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A set of metadata elements, their relations and constraints, defined with a specific goal, in a specific context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#peerReviewer</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#peerReviewer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">peerReviewer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#peerReviewer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">査読者</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#peerReviewer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The reviewer of a data set by an expert with similar credentials and subject knowledge as the data creator.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#persistentIdentifier</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#persistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">persistentIdentifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#persistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">永続識別子</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#persistentIdentifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A persistent identifier is a long-lasting reference to a digital object that gives information about that object regardless what happens to it. Developed to address “link rot,” a persistent identifier can be resolved to provide an appropriate representation of an object whether that objects changes its online location or goes offline.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#provenanceInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#provenanceInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">provenanceInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#provenanceInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">来歴情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#provenanceInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Information for a data object that includes: * the person who deposited the data object in the repository, * the source of the data object, * the date when the object was deposited, and * authenticity information needed to link the data object to its original source.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#repositorySystem</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#repositorySystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">repositorySystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#repositorySystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">リポジトリシステム</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#repositorySystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A computer system in which information may be stored.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#researchData</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#researchData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">researchData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#researchData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">研究データ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#researchData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Data that are used as primary sources to support technical or scientific enquiry, research, scholarship, or artistic activity, and that are used as evidence in the research process and/or are commonly accepted in the research community as necessary to validate research findings and results. All other digital and non-digital content have the potential of becoming research data. Research data may be experimental data, observational data, operational data, third party data, public sector data, monitoring data, processed data, or repurposed data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#researchObject</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#researchObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">researchObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#researchObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">リサーチオブジェクト</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#researchObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A type of digital object containing representative research entity such as research data, metadata, data document/source code, curation record, and landing page.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#retentionPolicy</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#retentionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">retentionPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#retentionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">保持ポリシー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#retentionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">An organization’s established protocol for retaining information for operational or regulatory compliance needs. The objectives of a data retention policy are to keep important information for future use or reference, to organize information so it can be searched and accessed at a later date, and to dispose of information that is no longer needed. A data retention policy must consider both the value of data over time, and regulations to which the data may be subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#selectionPolicy</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#selectionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">selectionPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#selectionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">選定ポリシー</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#selectionPolicy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A description and definition of how data selection process should be done.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#selectionResults</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#selectionResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">selectionResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#selectionResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">選定結果</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#selectionResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A results of the selection process that is determined appropriate for acceptance and ingest into the repository according to local collection policy and practice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#softwareRegistry</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#softwareRegistry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">softwareRegistry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#softwareRegistry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ソフトウェアレジストリ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#softwareRegistry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Copies of modern and obsolete versions of software (and any relevant code libraries)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sourceCode</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sourceCode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">sourceCode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#sourceCode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ソースコード</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#sourceCode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A series of computer instructions written in some human readable computer language, usually stored in a text file. Computer code should include explanatory comments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#submittedData</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#submittedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">submittedData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#submittedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">提出済みデータ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#submittedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Research data submitted for data curation by the data depositor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#successionPlan</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#successionPlan</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">successionPlan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#successionPlan</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">サクセッションプラン</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#successionPlan</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Plan for contingency, and/or escrow arrangements, in the case that the repository (or other entity responsible) ceases to operate or the institution substantially changes its scope.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#technicalInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#technicalInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">technicalInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#technicalInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">技術情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#technicalInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Technical information about the repository where the research object will be stored. This includes both software and hardware aspects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#termsOfUse</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#termsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">termsOfUse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#termsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">利用条件</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#termsOfUse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Agreement between a rights holder and a data user regarding the access and reuse of a target research object. External constraints subject to risk management are not included in this term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#usageResults</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usageResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">usageResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#usageResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">利用結果</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#usageResults</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A results of monitoring and recording how often data are viewed, requested, and/or downloaded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#versionInformation</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#versionInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">versionInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#versionInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">バージョン情報</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#versionInformation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Metadata describing the version number, history, and any changes made for each version.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#visualizedData</IRI>
+        <IRI>https://purl.org/curation-ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#visualizedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">visualizedData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>#visualizedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">可視化データ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>#visualizedData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The presentation of pictorial and/or graphical representations of a research data used to identify patterns, detect errors, and/or demonstrate the extent of a data set to third party users.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
