@@ -1698,6 +1698,13 @@ Removed the following three Activity classes to be treated as properties: Settin
         <Class IRI="#researchObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#curationRecord"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
+            <Class IRI="#researchObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#dataCurationContributor"/>
         <Class IRI="http://www.w3.org/ns/prov#Role"/>
     </SubClassOf>
@@ -1827,13 +1834,6 @@ Removed the following three Activity classes to be treated as properties: Settin
     <SubClassOf>
         <Class IRI="#sourceCode"/>
         <Class IRI="#researchObject"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#sourceCode"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/primaryTopic"/>
-            <Class IRI="#researchObject"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#submittedData"/>
