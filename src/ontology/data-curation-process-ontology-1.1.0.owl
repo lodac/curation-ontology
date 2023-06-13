@@ -29,7 +29,7 @@
 - Added labels and definitions to all described classes (Activity, Agent, Entity).
 Removed the following three Activity classes to be treated as properties: SettingTermsOfUse, Embargo, and ProvidingRestrictedAccess.
 - Changed the development policy regarding Agent classes; v.1.1 represented by a combination of the defined Agent class (Organization, Person, SoftwareAgent) and some asserted Role as &quot;dataCurationContributor.&quot; In line with this change, we defined &quot;hadRole&quot; as a sub-property of &quot;qualifiedAssociation.&quot;
-- Re-organized all Entity classes according to the newly-added labels and descriptions. They roughly divided into three categories: searchObject, dataCurationResources, and accessRightsInformation.
+- Re-organized all Entity classes according to the newly-added labels and descriptions. They roughly divided into three categories: researchObject, dataCurationResources, and accessRightsInformation.
 - Modified the following three class IRIs: Restructure to DataRestructuring, FileInventoryOrManifest to FileInspection, and FormulateSuccessionPlanning to SuccessionPlanning.</Literal>
     </Annotation>
     <Annotation>
