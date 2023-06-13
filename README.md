@@ -1,8 +1,8 @@
 # Repository for Data Curation Process Ontology
-Developing a common ontology for formalizing commonalities and differences in data curation activities.
+Developing an ontology for formalizing knowledge of data curation activities.
 
 # Introduction of this ontology
-The ontology aims to represent commonalities and differences in data curation activity’s structure. The domain to be covered by this ontology is that of data curation. Providing the structured data curation activity in a machine-readable format can support the knowledge-sharing process between humans and information systems in a scalable manner. It would be desirable to maintain the ontology through the collaboration of data curators in each field and ontologists who deal with knowledge sharing in information systems. The description of this ontology is based on the vocabulary of the PROV ontology (https://www.w3.org/TR/prov-o/) endorsed by W3C. The described activities were defined by the Data Curation Network, with some additions.
+The ontology aims to represent the structure of data curation activities. The domain to be covered by this ontology is that of data curation. Providing structured data curation activities in a machine-readable format can support the knowledge-sharing process between humans and information systems in a scalable manner. It is desirable to maintain the ontology through the collaboration of the data curators in each field and the ontologists who deal with knowledge sharing in information systems. The description of this ontology is based on the vocabulary of the PROV ontology (https://www.w3.org/TR/prov-o/) endorsed by W3C. The described activities were defined by the Data Curation Network, with some additions.
 
 # Installation
 The currently developed version is available on GitHub: https://github.com/lodac/data-curation/tree/main/src/ontology
