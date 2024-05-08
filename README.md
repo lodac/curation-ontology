@@ -10,4 +10,5 @@ The currently developed version is available on GitHub: https://github.com/lodac
 To open the ontology the program Protégé (https://protege.stanford.edu/) is recommended.
 
 # Publications
+Minamiyama Y, Takeda H, Hayashi M, Asaoka M, Yamaji K (2024). A study on formalizing the knowledge of data curation activities across different fields. PLoS ONE 19(4): e0301772. https://doi.org/10.1371/journal.pone.0301772
 Minamiyama, Yasuyuki, Takeda, Hideaki, Hayashi, Masaharu, Asaoka, Makoto, & Yamaji, Kazutsuna. (2022). Development and utilization of data curation process ontology. Zenodo. https://doi.org/10.5281/zenodo.6624457
